@@ -8,5 +8,19 @@
 
 int _printf(const char *format, ...)
 {
+	int i, count;
+	va_list valist;
+	print_table p[] = {
+		{"c", print_char},
+		{"s", print_str}
+		{NULL, NULL}
+	};
 
+	va_start(valist, format);
+
+	/*
+	 * INSERT PRINTF FUNCTIONALITY HERE
+	 */
+
+	va_end(valist);
 }
