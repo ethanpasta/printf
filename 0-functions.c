@@ -4,31 +4,41 @@
  * print_c - function prints char
  * @args: list of arguments
  *
- * Return: none
+ * Return: number of characters printed
  */
-void print_c(va_list args)
+int print_c(va_list args)
 {
 	_putchar(va_arg(args, int));
+	/* prints only one character */
+	return (1);
 }
 
 /**
  * print_s - function prints string
  * @args: list of arguments
  *
- * Return: none
+ * Return: number of characters printed
  */
-void print_s(va_list args)
+int print_s(va_list args)
 {
-	_putchar(va_arg(args, char *));
+	int i;
+	char *s = va_arg(args, char *);
+	for (i = 0; s[i]; i++)
+	{
+		_putchar(s[i]);
+	}
+	return (i);
 }
 
 /**
  * print_perc - function prints % sign
  * @args: list of arguments
  *
- * Return: none
+ * Return: number of characters printed
  */
-void print_perc(va_list args)
+int print_perc(__attribute__((unused)) va_list args)
 {
 	_putchar('%');
+	/* one character printed */
+	return (1);
 }
