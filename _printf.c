@@ -42,6 +42,8 @@ int print_helper(const char *format, print_table ptbl[], va_list args)
 		}
 		if (ptbl[j].type == 0)
 		{
+			if (!format[i])
+				break;
 			_putchar('%');
 			_putchar(format[i]);
 			count += 2;
