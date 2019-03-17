@@ -19,6 +19,7 @@ int main(void)
 	printf("THEM: Length:[%d, %i]\n", len2, len2);
 	_printf("US:   Negative:[%d]\n", -762534);
 	printf("THEM: Negative:[%d]\n", -762534);
+	_printf("BINARY:  %b\n", 2147483647);
 	//_printf("Unsigned:[%u]\n", ui);
 	//printf("Unsigned:[%u]\n", ui);
 	//_printf("Unsigned octal:[%o]\n", ui);
