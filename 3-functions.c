@@ -12,6 +12,7 @@ int print_b(va_list args)
 	int i = 0, count = 0;
 	int arr[32] = {0};
 	int num = va_arg(args, int);
+
 	while (num)
 	{
 		arr[i] = num % 2;
