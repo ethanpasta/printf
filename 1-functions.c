@@ -33,7 +33,7 @@ int print_d(va_list args)
 	_putchar('0' + current);
 	count++;
 
-     	return (count);
+	return (count);
 }
 
 /**
@@ -44,5 +44,5 @@ int print_d(va_list args)
  */
 int print_i(va_list args)
 {
-     	return (print_d(args));
+	return (print_d(args));
 }
