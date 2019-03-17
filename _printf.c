@@ -33,13 +33,11 @@ int print_helper(const char *format, print_table ptbl[], va_list args)
 		i++;
 		ptype = format[i];
 		for (j = 0; ptbl[j].type; j++)
-		{
 			if (ptype == ptbl[j].type)
 			{
 				count += ptbl[j].func(args);
 				break;
 			}
-		}
 		if (ptbl[j].type == 0)
 		{
 			if (!format[i])
