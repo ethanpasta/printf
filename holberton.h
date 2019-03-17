@@ -3,6 +3,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ *struct print - contains a printf flag and related function
+ *@type: the flag
+ *@func: the function
+ */
+
 typedef struct print
 {
 	char type;
