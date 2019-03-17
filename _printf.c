@@ -1,26 +1,18 @@
 #include "holberton.h"
 
 /**
- *_printf - prints input as printf would do
+ *print_helper - prints input as printf would do
  * @format: a character string containing directives
+ * @ptbl: table of functions
+ * @args: list of arguments
  * Return: The number of characters printed
  */
 
-int _printf(const char *format, ...)
+int print_helper(const char *format, print_table ptbl[], va_list args)
 {
 	int i = 0, j, count = 0, done = 0;
 	char ptype;
-	va_list args;
-	print_table ptbl[] = {
-		{'c', print_c},
-		{'s', print_s},
-		{'%', print_perc},
-		{'d', print_d},
-		{'i', print_i},
-		{'b', print_b},
-		{0, NULL}
-	};
-	va_start(args, format);
+
 	while (format && format[i])
 	{
 		if (!format[i])
@@ -56,6 +48,32 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
+	return (count);
+}
+
+/**
+ *_printf - prints input as printf would do
+ * @format: a character string containing directives
+ * Return: The number of characters printed
+ */
+
+int _printf(const char *format, ...)
+{
+	int count = 0;
+	va_list args;
+	print_table ptbl[] = {
+		{'c', print_c},
+		{'s', print_s},
+		{'%', print_perc},
+		{'d', print_d},
+		{'i', print_i},
+		{'b', print_b},
+		{0, NULL}
+	};
+	va_start(args, format);
+
+	count = print_helper(format, ptbl, args);
+
 	va_end(args);
 	return (count);
 }
