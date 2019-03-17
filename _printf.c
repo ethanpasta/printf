@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j, count = 0;
+	int i = 0, j, count = 0, done = 0;
 	char ptype;
 	va_list args;
 	print_table ptbl[] = {
@@ -17,19 +17,23 @@ int _printf(const char *format, ...)
 		{'%', print_perc},
 		{0, NULL}
 	};
-
 	va_start(args, format);
 	while (format && format[i])
 	{
 		if (!format[i])
-			break;
+			done = 1;
 		while (format[i] != '%')
 		{
+			if (!format[i])
+			{
+				done = 1;
+				break;
+			}
 			_putchar(format[i]);
 			count++;
 			i++;
 		}
-		if (!format[i])
+		if (done)
 			break;
 		i++;
 		ptype = format[i];
@@ -47,6 +51,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			count += 2;
 		}
+		i++;
 	}
 	va_end(args);
 	return (count);
