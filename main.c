@@ -27,6 +27,15 @@ int main(void)
 	_printf("Actual     : %c\n", 53);
 	printf("Expected   : %c\n", '\0');
 	_printf("Actual     : %c\n", '\0');
+	printf("Expected   : %c%", 98);
+	printf("\n");
+	_printf("Actual     : %c%", 98);
+	printf("\n");
+//	printf("Expected   : %c\n", '\0');
+//	_printf("Actual     : %c\n", '\0');
+//	printf("Expected   : %c\n", '\0');
+//	_printf("Actual     : %c\n", '\0');
+
 
 	//strings
 	printf("======STRINGS========\n");
