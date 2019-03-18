@@ -13,6 +13,8 @@ int print_b(va_list args)
 	int arr[33] = {0};
 	unsigned int num = va_arg(args, unsigned int);
 
+	if (!num)
+		_putchar('0');
 	while (num)
 	{
 		arr[i] = num % 2;
