@@ -29,18 +29,11 @@ int print_S(va_list args)
 		{
 			_putchar('\\');
 			_putchar('x');
-			count += 2;
 			conv = print_conv(s[i], 16, 1);
 			if (*(conv + 1) == 0)
-			{
 				_putchar('0');
-				count++;
-			}
-			else
-			{
-				_printf("%s", conv);
-				count += 2;
-			}
+			_printf("%s", conv);
+			count += 4;
 		}
 	}
 	return (count);
