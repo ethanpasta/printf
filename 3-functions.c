@@ -11,7 +11,7 @@ int print_b(va_list args)
 {
 	int i = 0, count = 0;
 	int arr[32] = {0};
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 
 	while (num)
 	{
@@ -19,10 +19,12 @@ int print_b(va_list args)
 		i++;
 		num /= 2;
 	}
-	for (i = i - 1; i >= 0; i--)
+	i--;
+	while (i >= 0)
 	{
 		_putchar(arr[i] + '0');
 		count++;
+		i--;
 	}
 	return (count);
 }
