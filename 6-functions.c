@@ -10,7 +10,7 @@
  */
 int print_S(va_list args)
 {
-	int i;
+	int i, count = 0;
 	char *s = va_arg(args, char *);
 	char *conv;
 
@@ -21,16 +21,27 @@ int print_S(va_list args)
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] >= 32 && s[i] <= 126)
+		{
 			_putchar(s[i]);
+			count++;
+		}
 		else
 		{
 			_putchar('\\');
 			_putchar('x');
+			count += 2;
 			conv = print_conv(s[i], 16, 1);
 			if (*(conv + 1) == 0)
+			{
 				_putchar('0');
-			_printf("%s", conv);
+				count++;
+			}
+			else
+			{
+				_printf("%s", conv);
+				count += 2;
+			}
 		}
 	}
-	return (i);
+	return (count);
 }
