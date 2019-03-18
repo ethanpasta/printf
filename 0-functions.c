@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_c - function prints char
@@ -29,9 +30,7 @@ int print_s(va_list args)
 		s = "(null)";
 	}
 	for (i = 0; s[i]; i++)
-	{
 		_putchar(s[i]);
-	}
 	return (i);
 }
 

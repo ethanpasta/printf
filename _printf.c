@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  *print_helper - prints input as printf would do
@@ -10,10 +11,11 @@
 
 int print_helper(const char *format, print_table ptbl[], va_list args)
 {
-	int i = 0, j, count = 0, done = 0;
+	int i = 0, j, count = 0, done = 0, ret;
 	char ptype;
-
-	while (format && format[i])
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	while (format[i])
 	{
 		if (!format[i])
 			done = 1;
@@ -35,7 +37,12 @@ int print_helper(const char *format, print_table ptbl[], va_list args)
 		for (j = 0; ptbl[j].type; j++)
 			if (ptype == ptbl[j].type)
 			{
-				count += ptbl[j].func(args);
+				ret = ptbl[j].func(args);
+				if (ret == -1)
+				{
+					return (-1);
+				}
+				count += ret;
 				break;
 			}
 		if (ptbl[j].type == 0)
