@@ -27,5 +27,7 @@ int print_u(va_list args);
 int print_o(va_list args);
 int print_x(va_list args);
 int print_X(va_list args);
+int print_S(va_list args);
+char *print_conv (unsigned int num, int base, int cap);
 
 #endif
