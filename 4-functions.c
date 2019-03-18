@@ -1,8 +1,15 @@
 #include "holberton.h"
+#include <stdio.h>
 
-int print_conv(unsigned int num, int base, int cap)
+/**
+ * print_conv - function converts input to specified base
+ * @num: the input number
+ * @base: the specified base
+ * @cap: a flag to print hex in capital. 0 is lowercase
+ * Return: number of characters printed
+ */
+char *print_conv(unsigned int num, int base, int cap)
 {
-	int i, count = 0;
 	char *outputString = "0123456789abcdef";
 	char *capitalString = "0123456789ABCDEF";
 	char arr[50];
@@ -17,13 +24,7 @@ int print_conv(unsigned int num, int base, int cap)
 		*--ptr = outputString[num % base];
 		num /= base;
 	} while (num);
-
-	for (i = 0; ptr[i]; i++)
-	{
-		_putchar(ptr[i]);
-		count++;
-	}
-	return (count);
+	return (ptr);
 }
 
 /**
@@ -34,11 +35,11 @@ int print_conv(unsigned int num, int base, int cap)
  */
 int print_u(va_list args)
 {
-	int count;
 	unsigned int num = va_arg(args, unsigned int);
+	char *conv;
 
-      	count = print_conv(num, 10, 0);
-	return (count);
+	conv = print_conv(num, 10, 0);
+	return (_printf("%s", conv));
 }
 
 /**
@@ -49,11 +50,11 @@ int print_u(va_list args)
  */
 int print_o(va_list args)
 {
-	int count;
 	unsigned int num = va_arg(args, unsigned int);
+	char *conv;
 
-	count = print_conv(num, 8, 0);
-	return (count);
+	conv = print_conv(num, 8, 0);
+	return (_printf("%s", conv));
 }
 
 /**
@@ -64,11 +65,11 @@ int print_o(va_list args)
  */
 int print_x(va_list args)
 {
-	int count;
 	unsigned int num = va_arg(args, unsigned int);
+	char *conv;
 
-      	count = print_conv(num, 16, 0);
-	return (count);
+	conv = print_conv(num, 16, 0);
+	return (_printf("%s", conv));
 }
 
 /**
@@ -79,9 +80,9 @@ int print_x(va_list args)
  */
 int print_X(va_list args)
 {
-	int count;
 	unsigned int num = va_arg(args, unsigned int);
+	char *conv;
 
-	count = print_conv(num, 16, 1);
-	return (count);
+	conv = print_conv(num, 16, 1);
+	return (_printf("%s", conv));
 }
