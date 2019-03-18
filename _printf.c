@@ -12,14 +12,12 @@
 int print_helper(const char *format, print_table ptbl[], va_list args)
 {
 	int i = 0, j, count = 0, done = 0, ret;
-	char ptype;
+
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	while (format[i])
 	{
-		if (!format[i])
-			done = 1;
-		while (format[i] != '%')
+		for (; format[i] != '%'; i++, count++)
 		{
 			if (!format[i])
 			{
@@ -27,15 +25,12 @@ int print_helper(const char *format, print_table ptbl[], va_list args)
 				break;
 			}
 			_putchar(format[i]);
-			count++;
-			i++;
 		}
 		if (done)
 			break;
 		i++;
-		ptype = format[i];
 		for (j = 0; ptbl[j].type; j++)
-			if (ptype == ptbl[j].type)
+			if (format[i] == ptbl[j].type)
 			{
 				ret = ptbl[j].func(args);
 				if (ret == -1)
