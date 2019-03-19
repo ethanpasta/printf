@@ -15,10 +15,10 @@ The following format specifiers are covered. An asterix signifies a Format Speci
 | %o                 | Print Octal Number                        |
 | %x                 | Print Hexidecimal Number (Lowercase)      |
 | %X                 | Print Hexidecimal Number (Uppercase)      |
-| %S \*              | Print String \| Non Characters Output Hex |
-| %R \*              | Print String \| ROT13 encrypted           |
+| %S \*              | Print String - Non Characters Output Hex  |
+| %R \*              | Print String - ROT13 encrypted            |
 ### Release History
 * 0.0.1
   * Work in progress
 ### Authors
-[Jason Cortella](https://github.com/jasoncortella) - [@JasonCortella](https://twitter.com/JasonCortella) \|\| [Ethan Mayer](https://github.com/ethanpasta) - [@Eitanmayer57](https://twitter.com/eitanmayer57)
+[Jason Cortella](https://github.com/jasoncortella) - [@JasonCortella](https://twitter.com/JasonCortella) -- [Ethan Mayer](https://github.com/ethanpasta) - [@Eitanmayer57](https://twitter.com/eitanmayer57)
