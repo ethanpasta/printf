@@ -14,6 +14,6 @@ int print_p(va_list args)
 
 	str = print_conv(adr, 16, 0);
 	if (!adr)
-		return _printf("(nil)");
-	return _printf("0x%s", str);
+		return (_printf("(nil)"));
+	return (_printf("0x%s", str));
 }
