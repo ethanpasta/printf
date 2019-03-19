@@ -76,6 +76,8 @@ int _printf(const char *format, ...)
 		{'X', print_X},
 		{'S', print_S},
 		{'r', print_r},
+		{'p', print_p},
+		{'R', print_R},
 		{0, NULL}
 	};
 	va_start(args, format);
