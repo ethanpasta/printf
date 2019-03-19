@@ -16,6 +16,7 @@ The following format specifiers are covered. An asterix signifies a format speci
 | %o                 | Print Octal Number                        |
 | %x                 | Print Hexidecimal Number (Lowercase)      |
 | %X                 | Print Hexidecimal Number (Uppercase)      |
+| %p		     | Print Memory address in hexadecimal	 |
 | %S \*              | Print String - Non Characters Output Hex  |
 | %R \*              | Print String - ROT13 encrypted            |
 
