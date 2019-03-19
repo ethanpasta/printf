@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -8,8 +9,11 @@
  */
 int print_p(va_list args)
 {
-	long int adr = va_arg(args, int);
-	_putchar('0');
-	_putchar('x');
-	return _printf("%x", adr) + 2;
+	unsigned long int adr = va_arg(args, unsigned long int);
+	char *str;
+
+	str = print_conv(adr, 16, 0);
+	if (!adr)
+		return _printf("(nil)");
+	return _printf("0x%s", str);
 }
