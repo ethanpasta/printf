@@ -2,7 +2,7 @@
 ### Overview
  _printf is a C module that behaves like printf and also has additional functionalities not found in printf. This project was done as part of the second month curriculum at [Holberton School](https://www.holbertonschool.com/), San Francisco.
 ### Features
-The following format specifiers are covered. An asterix signifies a Format Specifier not covered by printf.
+The following format specifiers are covered. An asterix signifies a format specifier not covered by printf.
 
 |  Format Specifier  |    Functionality                          |
 | ------------------ | ----------------------------------------- |
@@ -23,4 +23,5 @@ The following format specifiers are covered. An asterix signifies a Format Speci
 * 0.0.1
   * Work in progress
 ### Authors
-[Jason Cortella](https://github.com/jasoncortella) - [@JasonCortella](https://twitter.com/JasonCortella) -- [Ethan Mayer](https://github.com/ethanpasta) - [@Eitanmayer57](https://twitter.com/eitanmayer57)
+[Jason Cortella](https://github.com/jasoncortella) - [@JasonCortella](https://twitter.com/JasonCortella) 
+[Ethan Mayer](https://github.com/ethanpasta) - [@Eitanmayer57](https://twitter.com/eitanmayer57)
