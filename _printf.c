@@ -83,6 +83,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 	count = print_helper(format, ptbl, args);
+	_putchar(-1);
 	va_end(args);
 	return (count);
 }
