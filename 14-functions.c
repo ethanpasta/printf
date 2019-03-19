@@ -9,7 +9,7 @@
  */
 int print_r(va_list args)
 {
-	int i = 0, count;
+	int i = 0, count = 0;
 	char *s = va_arg(args, char *);
 
 	if (s == NULL)
@@ -19,6 +19,7 @@ int print_r(va_list args)
 	while (s[i])
 		i++;
 	count = i;
+	i--;
 	while (i >= 0)
 	{
 		_putchar(s[i]);
