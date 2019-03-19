@@ -1,12 +1,8 @@
 # _printf
 ### Overview
- _printf is a C module that behaves like printf and also has additio\
-nal functionalities not found in printf. This project was done as pa\
-rt of the second month curriculum at [Holberton School](https://www.\
-holbertonschool.com/), San Francisco.
+ _printf is a C module that behaves like printf and also has additional functionalities not found in printf. This project was done as part of the second month curriculum at [Holberton School](https://www.\holbertonschool.com/), San Francisco.
 ### Features
-The following format specifiers are covered. An asterix signifies a \
-format specifier not covered by printf.
+The following format specifiers are covered. An asterix signifies a format specifier not covered by printf.
 
 |  Format Specifier  |    Functionality                          |
 | ------------------ | ----------------------------------------- |
@@ -15,11 +11,11 @@ format specifier not covered by printf.
 | %%                 | Print %                                   |
 | %d                 | Print Decimal Number                      |
 | %i                 | Print Integer (base 10)                   |
-| %b  \*             | Decimal Input, Print Binary Output        |
+| %b \*              | Decimal Input, Print Binary Output        |
 | %u                 | Print Unsigned Decimal                    |
 | %o                 | Print Octal Number                        |
 | %x                 | Print Hexidecimal Number (Lowercase)      |
-| %r  \*             | Print String in Reverse                   |
+| %r \*              | Print String in Reverse                   |
 | %X                 | Print Hexidecimal Number (Uppercase)      |
 | %p \*              | Print Memory address in hexadecimal       |
 | %S \*              | Print String - Non Characters Output Hex  |
@@ -37,7 +33,4 @@ format specifier not covered by printf.
 ### About
 All files were created and compiled on `Ubuntu 14.04.4 LTS` using `GCC 4.8.4` with the following flags: `-Wall -Werror -Wextra -Wno-format -pedantic`
 ### Authors
-[Jason Cortella](https://github.com/jasoncortella) - [@JasonCortella\
-](https://twitter.com/JasonCortella) \|\| [Ethan Mayer](https://gith\
-ub.com/ethanpasta) - [@Eitanmayer57](https://twitter.com/eitanmayer5\
-7)
+[Jason Cortella](https://github.com/jasoncortella) - [@JasonCortella](https://twitter.com/JasonCortella) \|\| [Ethan Mayer](https://github.com/ethanpasta) - [@Eitanmayer57](https://twitter.com/eitanmayer57)
