@@ -8,7 +8,7 @@
  * @cap: a flag to print hex in capital. 0 is lowercase
  * Return: number of characters printed
  */
-char *print_conv(unsigned int num, int base, int cap)
+char *print_conv(unsigned long int num, int base, int cap)
 {
 	char *outputString = "0123456789abcdef";
 	char *capitalString = "0123456789ABCDEF";
