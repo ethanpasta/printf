@@ -1,6 +1,10 @@
 # _printf
 ### Overview
  _printf is a C module that behaves like printf and also has additional functionalities not found in printf. This project was done as part of the second month curriculum at [Holberton School](https://www.\holbertonschool.com/), San Francisco.
+### Prototype of _printf function
+`int _printf(const char *format, ...);`
+Function prints input, and returns either the number of characters printed, or (-1) upon error.
+
 ### Features
 The following format specifiers are covered. An asterix signifies a format specifier not covered by printf.
 
