@@ -6,7 +6,7 @@
 Function prints input, and returns either the number of characters printed, or (-1) upon error.
 
 ### Features
-The following format specifiers are covered. An asterix signifies a format specifier not covered by printf.
+The following format specifiers are covered. An asterisk signifies a format specifier not covered by printf.
 
 |  Format Specifier  |    Functionality                          |
 | ------------------ | ----------------------------------------- |
